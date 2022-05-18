@@ -1,0 +1,466 @@
+/*  * Importazione Dei Font Che Verranno Utilizzati Per Creare Il Gioco = "Press Start 2P" */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* * Root: (E Una Variabile Utilizzata In CSS) (In Questo Caso É Stata Utilizzata Per Salvare Svariati Colori Per Poi Creare L'Effetto Utilizzato Nei Button) */
+:root {
+  --gradient: linear-gradient(
+    45deg,
+    #cc99ff,
+    #ff99cc,
+    #fedb7c,
+    #ffffff,
+    #b062fe,
+    #ff6bb5,
+    #ffc933
+    );
+}
+
+a:link{
+text-decoration: none;
+}
+
+/* * Body (Contiene: "Reset Dei Margini"  "Background" "Grandezza Background" */
+body {
+margin: 0;
+background: url(../img/sfondo.gif);
+background-size: 100%;
+} 
+
+/* * Home */
+
+.title-home {
+background: -webkit-linear-gradient(-160deg, #ffc933 0%, #cc99ff 50%,  #ff99cc);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-top: 70px;
+font-family: 'Press Start 2P', cursive;
+font-size: 85px;
+}
+
+.container-btn-home{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.btn-play {
+left: -6px;
+top: 0;
+border-left: 6px white solid;
+border-right: 6px white solid;
+margin-top: 150px;
+width: 600px;
+height: 100px;
+background-image: var(--gradient);
+background-size: 300%;  
+background-position: left;
+display: inline-block;
+position: relative;
+font-size: 40px;
+padding: 20px;
+font-family: "Press Start 2P", cursive;
+box-shadow: inset -4px -4px 0px 0px transparent;
+transition: background-position 1s;
+color: #ffffff;
+}
+
+.btn-play:hover, .btn-play:focus {
+left: -6px;
+top: 0;
+border-left: 6px white solid;
+border-right: 6px white solid;
+transition: 1s;
+color: #ffffff;
+box-shadow: inset -6px -6px 0px 0px transparent;
+background-position: right;
+}
+
+.btn-play:before, .btn-play:after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+box-sizing: content-box;
+color: #212121;
+}
+
+.btn-play:before {
+top: -6px;
+left: 0;
+border-top: 6px white solid;
+border-bottom: 6px white solid;
+}
+
+
+.btn-play:after {
+left: -6px;
+top: 0;
+color: #212121;
+border-left: 6px white solid;
+border-right: 6px white solid;
+background-image: linear-gradient(-160deg, #ffc933 0%, #cc99ff 50%,  #ff99cc);
+z-index: 2;
+opacity: 0;
+}
+
+/* Bottone Audio */
+.btn-audiosettings {
+left: -6px;
+top: 0;
+border-left: 6px white solid;
+border-right: 6px white solid;
+margin-top: 150px;
+width: 600px;
+height: 100px;
+background-image: var(--gradient);
+background-size: 300%;  
+background-position: left;
+display: inline-block;
+position: relative;
+font-size: 40px;
+padding: 20px;
+font-family: "Press Start 2P", cursive;
+box-shadow: inset -4px -4px 0px 0px transparent;
+transition: background-position 1s;
+color: #ffffff;
+}
+
+.btn-audiosettings:hover, .btn-audiosettings:focus {
+left: -6px;
+top: 0;
+border-left: 6px white solid;
+border-right: 6px white solid;
+transition: 1s;
+color: #ffffff;
+box-shadow: inset -6px -6px 0px 0px transparent;
+background-position: right;
+}
+
+.btn-audiosettings:before, .btn-audiosettings:after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+box-sizing: content-box;
+color: #212121;
+}
+
+.btn-audiosettings:before {
+top: -6px;
+left: 0;
+border-top: 6px white solid;
+border-bottom: 6px white solid;
+}
+
+.btn-audiosettings:after {
+left: -6px;
+top: 0;
+color: #212121;
+border-left: 6px white solid;
+border-right: 6px white solid;
+background-image: linear-gradient(-160deg, #ffc933 0%, #cc99ff 50%,  #ff99cc);
+z-index: 2;
+opacity: 0;
+}
+
+/* Impostazioni Audio */
+
+.title-audiosettings{
+background: -webkit-linear-gradient(-160deg, #ffc933 0%, #cc99ff 50%,  #ff99cc);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-top: 70px;
+font-family: 'Press Start 2P', cursive;
+font-size: 65px;
+}
+
+.btn-backtohomefromaudiosettings {
+margin-top: -82px;
+margin-left: -230px;
+width: 150px;
+height: 60px;
+background-image: var(--gradient);
+background-size: 300%;  
+background-position: left;
+display: inline-block;
+position: relative;
+font-size: 10px;
+padding: 20px;
+font-family: "Press Start 2P", cursive;
+color: #ffffff;
+box-shadow: inset -4px -4px 0px 0px transparent;
+  
+}
+
+.btn-backtohomefromaudiosettings:hover, .btn-backtohomefromaudiosettings:focus {
+transition: 1s;
+background-position: right;
+color: white;
+box-shadow: inset -6px -6px 0px 0px transparent;
+}
+
+.btn-backtohomefromaudiosettings:active {
+box-shadow: inset 4px 4px 0px 0px transparent;
+}
+
+.btn-backtohomefromaudiosettings:before, .btn-backtohomefromaudiosettings:after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+box-sizing: content-box;
+}
+
+.btn-backtohomefromaudiosettings:before {
+top: -6px;
+left: 0;
+border-top: 6px white solid;
+border-bottom: 6px white solid;
+}
+
+.btn-backtohomefromaudiosettings:after {
+left: -6px;
+top: 0;
+border-left: 6px white solid;
+border-right: 6px white solid;
+}
+
+.container-element-audiosettings{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.container-slidersound{
+margin-top: 150px;
+width: 550px;
+height: 100px;
+border: 6px solid white;
+border-radius: 5px;
+background-color: black;
+}
+
+input[type="range"] {
+appearance: none;
+margin-left: -100px;
+margin-top: 42.5px;
+height: 10px;
+width: 350px;
+border-radius: 4px;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+appearance: none;
+height: 20px;
+width: 20px;
+border-radius: 50%;
+background: purple;
+}
+
+#volume_show{
+margin-top: -20px;
+margin-left: 350px;
+color: white;
+font-family: 'Press Start 2P', cursive;
+font-size: 15px;  
+}
+
+/* Seleziona Modalita */
+
+.title-selectmode{
+background: -webkit-linear-gradient(-160deg, #ffc933 0%, #cc99ff 50%,  #ff99cc);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-top: 70px;
+font-family: 'Press Start 2P', cursive;
+font-size: 43px;
+}
+
+.btn-backtohomefromselectmode {
+margin-top: -82px;
+margin-left: -230px;
+width: 150px;
+height: 60px;
+background-image: var(--gradient);
+background-size: 300%;  
+background-position: left;
+display: inline-block;
+position: relative;
+font-size: 10px;
+padding: 20px;
+font-family: "Press Start 2P", cursive;
+color: #ffffff;
+box-shadow: inset -4px -4px 0px 0px transparent;
+  
+}
+
+.btn-backtohomefromselectmode:hover, .btn-backtohomefromselectmode:focus {
+transition: 1s;
+background-position: right;
+color: white;
+box-shadow: inset -6px -6px 0px 0px transparent;
+}
+
+.btn-backtohomefromselectmode:active {
+box-shadow: inset 4px 4px 0px 0px transparent;
+}
+
+.btn-backtohomefromselectmode:before, .btn-backtohomefromselectmode:after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+box-sizing: content-box;
+}
+
+.btn-backtohomefromselectmode:before {
+top: -6px;
+left: 0;
+border-top: 6px white solid;
+border-bottom: 6px white solid;
+}
+
+.btn-backtohomefromselectmode:after {
+left: -6px;
+top: 0;
+border-left: 6px white solid;
+border-right: 6px white solid;
+}
+
+.container-btn-selectmode{
+display: flex;
+flex-direction: column;
+align-items: left;
+}
+
+.btn-standardmode {
+left: -6px;
+top: 0;
+border-left: 6px white solid;
+border-right: 6px white solid;
+margin-top: 150px;
+width: 600px;
+height: 100px;
+background-image: var(--gradient);
+background-size: 300%;  
+background-position: left;
+display: inline-block;
+position: relative;
+font-size: 40px;
+padding: 20px;
+font-family: "Press Start 2P", cursive;
+box-shadow: inset -4px -4px 0px 0px transparent;
+transition: background-position 1s;
+color: #ffffff;
+}
+
+.btn-standardmode:hover, .btn-standardmode:focus {
+left: -6px;
+top: 0;
+border-left: 6px white solid;
+border-right: 6px white solid;
+transition: 1s;
+color: #ffffff;
+box-shadow: inset -6px -6px 0px 0px transparent;
+background-position: right;
+}
+
+.btn-standardmode:before, .btn-standardmode:after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+box-sizing: content-box;
+color: #212121;
+}
+
+.btn-standardmode:before {
+top: -6px;
+left: 0;
+border-top: 6px white solid;
+border-bottom: 6px white solid;
+}
+
+.btn-standardmode:after {
+left: -6px;
+top: 0;
+color: #212121;
+border-left: 6px white solid;
+border-right: 6px white solid;
+background-image: linear-gradient(-160deg, #ffc933 0%, #cc99ff 50%,  #ff99cc);
+z-index: 2;
+opacity: 0;
+}
+
+.textmodechill{
+margin-top: -320px;
+margin-left: 700px;
+font-family: 'Press Start 2P', cursive;
+font-size: 27px;
+}
+
+.btn-hardcoremode {
+left: -6px;
+top: 0;
+border-left: 6px white solid;
+border-right: 6px white solid;
+margin-top: 150px;
+width: 600px;
+height: 100px;
+background-image: var(--gradient);
+background-size: 300%;  
+background-position: left;
+display: inline-block;
+position: relative;
+font-size: 40px;
+padding: 20px;
+font-family: "Press Start 2P", cursive;
+box-shadow: inset -4px -4px 0px 0px transparent;
+transition: background-position 1s;
+color: #ffffff;
+}
+
+.btn-hardcoremode:hover, .btn-hardcoremode:focus {
+left: -6px;
+top: 0;
+border-left: 6px white solid;
+border-right: 6px white solid;
+transition: 1s;
+color: #ffffff;
+box-shadow: inset -6px -6px 0px 0px transparent;
+background-position: right;
+}
+
+.btn-hardcoremode:before, .btn-hardcoremode:after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+box-sizing: content-box;
+color: #212121;
+}
+
+.btn-hardcoremode:before {
+top: -6px;
+left: 0;
+border-top: 6px white solid;
+border-bottom: 6px white solid;
+}
+
+.btn-hardcoremode:after {
+left: -6px;
+top: 0;
+color: #212121;
+border-left: 6px white solid;
+border-right: 6px white solid;
+background-image: linear-gradient(-160deg, #ffc933 0%, #cc99ff 50%,  #ff99cc);
+z-index: 2;
+opacity: 0;
+}
+
+.textmodetryhard{
+margin-top: 210px;
+margin-left: 700px;
+font-family: 'Press Start 2P', cursive;
+font-size: 27px;
+}
