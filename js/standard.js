@@ -219,7 +219,7 @@ function TimerGame(){
     function RandomPositionBaki5() {
         var $baki5 = $("#baki5");
 
-        $("#baki1").click(function(){
+        $("#baki5").click(function(){
             $("#baki5").css("display", "none"); 
         });
 
