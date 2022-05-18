@@ -48,10 +48,10 @@ function ChangeColorOrange(){
 
     $("#counter").css("color", "#FFBE79");
     $("#baki1").css("background-color", "#FFBE79");
-    $("#baki2").css("background-color", "#FEDA75");
-    $("#baki3").css("background-color", "#FEDA75");
-    $("#baki4").css("background-color", "#FEDA75");
-    $("#baki5").css("background-color", "#FEDA75");
+    $("#baki2").css("background-color", "#FFBE79");
+    $("#baki3").css("background-color", "#FFBE79");
+    $("#baki4").css("background-color", "#FFBE79");
+    $("#baki5").css("background-color", "#FFBE79");
     $("#timer").css("color", "#FFBE79");
     $("#points").css("color", "#FFBE79");
 
@@ -62,19 +62,22 @@ function ChangeColorRed(){
 
     $("#counter").css("color", "#FF5151");
     $("#baki1").css("background-color", "#FF5151");
-    $("#baki2").css("background-color", "#FEDA75");
-    $("#baki3").css("background-color", "#FEDA75");
-    $("#baki4").css("background-color", "#FEDA75");
-    $("#baki5").css("background-color", "#FEDA75");
+    $("#baki2").css("background-color", "#FF5151");
+    $("#baki3").css("background-color", "#FF5151");
+    $("#baki4").css("background-color", "#FF5151");
+    $("#baki5").css("background-color", "#FF5151");
     $("#timer").css("color", "#FF5151");
     $("#points").css("color", "#FF5151");
 }
 
 function ChangeColorPurple(){
     $("#cursor").css("border", "8px solid #9966CC");
-
     $("#counter").css("color", "#9966CC");
-    $("#baki").css("background-color", "#9966CC");
+    $("#baki1").css("background-color", "#9966CC");
+    $("#baki2").css("background-color", "#9966CC");
+    $("#baki3").css("background-color", "#9966CC");
+    $("#baki4").css("background-color", "#9966CC");
+    $("#baki5").css("background-color", "#9966CC");
     $("#timer").css("color", "#9966CC");
     $("#points").css("color", "#9966CC");
 }
@@ -84,10 +87,10 @@ function ChangeColorBlue(){
 
     $("#counter").css("color", "#A5D3FE");
     $("#baki1").css("background-color", "#A5D3FE");
-    $("#baki2").css("background-color", "#FEDA75");
-    $("#baki3").css("background-color", "#FEDA75");
-    $("#baki4").css("background-color", "#FEDA75");
-    $("#baki5").css("background-color", "#FEDA75");
+    $("#baki2").css("background-color", "#A5D3FE");
+    $("#baki3").css("background-color", "#A5D3FE");
+    $("#baki4").css("background-color", "#A5D3FE");
+    $("#baki5").css("background-color", "#A5D3FE");
     $("#timer").css("color", "#A5D3FE");
     $("#points").css("color", "#A5D3FE");
 }
@@ -97,10 +100,10 @@ function ChangeColorGreen(){
 
     $("#counter").css("color", "#B2F695");
     $("#baki1").css("background-color", "#B2F695");
-    $("#baki2").css("background-color", "#FEDA75");
-    $("#baki3").css("background-color", "#FEDA75");
-    $("#baki4").css("background-color", "#FEDA75");
-    $("#baki5").css("background-color", "#FEDA75");
+    $("#baki2").css("background-color", "#B2F695");
+    $("#baki3").css("background-color", "#B2F695");
+    $("#baki4").css("background-color", "#B2F695");
+    $("#baki5").css("background-color", "#B2F695");
     $("#timer").css("color", "#B2F695");
     $("#points").css("color", "#B2F695");
 }
