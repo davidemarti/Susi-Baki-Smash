@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+    <html lang="en">
+        
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <!-- * Titolo Pagina Web -->
+            <title>SUSI BAKI GAME</title>
+
+            <!-- * CSS -->
+            <link rel="stylesheet" href="CSS/Style.css">
+
+            <!-- * Bootstrap -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+            <!-- * Fa-Icon -->
+            <script src="https://kit.fontawesome.com/7fcecf0aad.js" crossorigin="anonymous"></script>
+
+            <!-- * JQuery -->
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        </head>
+
+        <body>
+
+            <!-- * Cursore -->
+            <div id="Cursor"></div>
+
+            <!-- ! Schermata Richiesta Di Acconsentimento Da Parte Del Player -->
+
+            <!--  ! Sezione = Richiesta Di Acconsentimento Da Parte Del Player (Contiene: Bottone Acconsenti + Caricamento) -->
+
+            <!-- * Container Acconsenti Per Giocare -->
+            <div class="Container-YouAgree"> 
+            
+                <!-- * Container Box Acconsenti Per Giocare -->
+                <div class="Container-Box-YouAgree"></div> 
+
+                <!-- * Titolo Acconsenti Per Giocare -->
+                <h1 class="Title-YouAgree">WE NEED YOUR CONSENT TO LOAD THE GAME</h1>
+
+                <!-- * Descrizione Acconsenti Per Giocare -->
+                <h6 class="Description-YouAgree">TO AGREE PRESS THE BUTTON</h6>
+
+                <!-- * Bottone Acconsenti Per Giocare -->
+                <button type="button" class="Btn-YouAgree" onclick="UserInteractionObtained()">I Agree</button>
+
+            </div>
+
+            <!-- * Container Loader -->
+            <div class="Container-Loader">
+                    
+                <!-- * Loader -->
+                <div class="Loader"></div>
+
+            </div>
+
+            <!-- ! Schermata Home / Seleziona Modalita Di Gioco / Impostazioni Audio -->
+
+            <!-- * Container -->
+            <div class="container">
+
+                <!--  ! Sezione = Home (Contiene: Titolo / Bottone Play / Bottone Impostazioni Audio) -->
+
+                <!-- * Container Home -->
+                <div class="Container-Home">
+
+                    <!-- * Titolo Home -->
+                    <h1 class="Title-Home">SUSI BAKI SMASH</h1>
+
+                    <!-- * Bottone Play -->
+                    <button type="button" class="Btn-Play" onclick="PlaySound()">PLAY</button>
+
+                    <!-- * Bottone Impostazioni Audio -->
+                    <button type="button" class="Btn-AudioSettings" onclick="PlaySound()">AUDIO</button>
+                
+                </div>
+
+                <!-- ! Sezione = Seleziona Modalita Di Gioco (Contiene Titolo / Bottone Torna Alla Home / Bottone Modalita Standard / Descrizione Modalita Standard / Bottone Modalita Hardcore / Descrizione Modalita Hardcore) -->
+
+                <!-- * Container Seleziona Modalita Di Gioco -->
+                <div class="Container-SelectGamemode">
+
+                    <!-- * Bottone Torna Alla Home -->
+                    <button type="button" class="Btn-BackToHomeFromSelectGamemode" onclick="PlaySound()"><i class="fa-solid fa-arrow-left"></i> INDIETRO</button>
+                
+                    <!-- * Titolo Seleziona Modalita Di Gioco-->
+                    <h1 class="Title-SelectGamemode">SELECT THE GAME MODE</h1>
+
+                    <!-- * Bottone Modalita Chill -->
+                    <button type="button" class="Btn-StandardGamemode" onclick="PlaySound()">STANDARD</button>
+
+                    <!-- * Sottotitolo Modalita Hardcore -->
+                    <h3 class="Subtitle-StandardGamemode">GAME DURATION: 60s</h3>
+
+                    <!-- * Bottone Modalita Tryhard -->
+                    <button type="button" class="Btn-HardcoreGamemode" onclick="PlaySound()">HARDCORE</button>
+
+                    <!-- * Sottotitolo Modalita Hardcore -->
+                    <h3 class="Subtitle-HardcoreGamemode">GAME DURATION: 30s</h3>
+
+                </div>
+
+                <!-- ! Sezione = Impostazioni Audio (Contiene Titolo / Bottone Torna Alla Home / Slider Volume Soundtrack) -->
+
+                <!-- * Container Impostazioni Audio -->
+                <div class="Container-AudioSettings">
+
+                    <!-- * Bottone Torna Alla Home -->
+                    <button type="button" class="Btn-BackToHomeFromAudioSettings" onclick="PlaySound()"><i class="fa-solid fa-arrow-left"></i> INDIETRO</button>
+                
+                    <!-- * Titolo Seleziona Modalita Di Gioco-->
+                    <h1 class="Title-AudioSettings">AUDIO SETTINGS</h1>
+
+                    <!-- * Img Che Cambiano In Base Alla Percentuale Dello Slider -->
+                    <div id="ImgVolumeChange"><img src="Img/Sound100.png"></div>
+
+                    <!-- * Container Slider Audio -->
+                    <div class="Container-SliderAudio"></div>
+
+                    <!-- * Slider -->
+                    <input id="Slider" type="range" min="0" max="100" value="100" oninput="Slider()">
+                        
+                    <!-- * Percentuale Volume Slider -->
+                    <p id="VolumePercent">100</p>
+
+                </div>  
+
+            </div>
+
+            <!-- ! Schermata Game = Modalita Standard / Game = Modalita Hardcore -->
+
+            <!-- * Container -->
+            <div class="container">
+
+                <!-- * Container Modalita Standard -->
+                <div class="Container-StandardGameMode">
+
+                    <!-- * Container Schermata Di Start -->
+                    <div class="Container-StartGame">
+
+                        <!-- * Linea Verticale Separatoria -->
+                        <div class="Vertical-Line"></div>
+
+                        <!-- * Linea Orizzontale Separatoria -->
+                        <div class="Horizontal-Line"></div>
+
+                        <!-- * Container How To Play -->
+                        <div class="Container-HowToPlay">
+
+                            <!-- * Btn Torna Alla Home -->
+                            <img class="BackToHomeFromStandardGameMode" src="Img/BtnBackFromGame.png">
+
+                            <!-- * Titolo How To Play -->
+                            <h1 class="Title-HowToPlay">HOW TO PLAY</h1>
+
+                            <!-- * Descrizione Di Come Si Gioca -->
+                            <ul class="Description-HowToPlay">
+                                <li>CLICK EVERY SPAWNED BAKI TO <br> EARN POINTS</li>
+                                <li>AFTER THE 5TH UN-CLICKED BAKI <br> ON THE DISPLAY, YOU WILL LOSE <br> 500 POINTS</li>
+                                <li>DON'T MISS ANY BAKI! YOU WILL <br> LOSE 250 POINTS BY CLICKING  <br> ON THE BACKGROUND</li>
+                            </ul>
+
+                            <!-- * Btn Che Fa Partire Il Gioco -->
+                            <button type="button" class="Btn-StartGame" onclick="StartGame()">START</button>
+
+                        </div>
+
+                        <!-- * Container Settaggi Musica In Game -->
+                        <div class="Container-Music">
+
+                            <!-- * Titolo Settaggi Musica In Game -->
+                            <div class="Title-Music">MUSIC</div>
+
+                            <!-- * Btn Selezione Settaggi Musica In Game -->
+                            <div class="MusicSettings">
+
+                                <!-- * Form Per Poter Creare La Selezione Dei Settaggi Musica In Game -->
+                                <form>
+
+                                    <!-- * Disabilita La Musica -->
+                                    <div class="Btn-Disabled">
+                                        <input id="Btn-Disabled" type="radio" name="Btn-Music">
+                                    </div>
+                                    <div class="Name-Music">DISABLED</div>
+
+                                    <!-- * Abilita La Musica -->
+                                    <div class="Btn-Enable">
+                                        <input id="Btn-Enable" type="radio" name="Btn-Music" checked>
+                                    </div>
+                                    <div class="Name-Music">ENABLED</div>
+
+                                    <!-- * Abilita La Focus Mode -->
+                                    <div class="Btn-FocusModeEnable">
+                                        <input id="Btn-FocusModeEnable" type="radio" name="Btn-Music">
+                                    </div>
+                                    <div class="Name-Music">FOCUS⠀MODE</div>
+
+                                </form>
+
+                            </div>
+
+                            <!-- * Descrizione Dei Settaggi Della Musica -->
+                            <ul class="Description-SettingsMusic">
+                                <li>DISABLED = MUSIC OFF</li>
+                                <li>ENABLED = MUSIC ON</li>
+                                <li>FOCUS MODE = YOU WILL HAVE A MUSICAL BACKGROUND THAT DOES NOT DECONCENTRATE YOU</li>
+                            </ul>
+
+                        </div>
+
+                        <!-- * Container Seleziona Un Colore -->
+                        <div class="Container-ChooseColor">
+
+                            <!-- * Titolo Seleziona Un Colore -->
+                            <h1 class="Title-ChooseColor">CHOOSE COLOR</h1>
+
+                            <!-- * Btn Selezione Un Colore -->
+                            <div class="ChooseColor-Settings">
+
+                                 <!-- * Form Per Poter Creare La Selezione Della Selezione Di Un Colore -->
+                                <form>
+
+                                    <!-- * Giallo -->
+                                    <div class="Btn-Yellow">
+                                        <input type="radio" name="Btn-ChooseColor" onclick="ChangeHudInColorYellow()">
+                                    </div>
+                                    <div class="Name-ChooseColor">YELLOW</div>
+
+                                    <!-- * Arancione -->
+                                    <div class="Btn-Orange">
+                                        <input type="radio" name="Btn-ChooseColor" onclick="ChangeHudInColorOrange()">
+                                    </div>
+                                    <div class="Name-ChooseColor">ORANGE</div>
+
+                                    <!-- * Rosso -->
+                                    <div class="Btn-Red">
+                                        <input type="radio" name="Btn-ChooseColor" onclick="ChangeHudInColorRed()">
+                                    </div>
+                                    <div class="Name-ChooseColor">RED</div>
+
+                                    <!-- * Viola -->
+                                    <div class="Btn-Purple">
+                                        <input type="radio" name="Btn-ChooseColor" onclick="ChangeHudInColorPurple()">
+                                    </div>
+                                    <div class="Name-ChooseColor">PURPLE</div>
+
+                                    <!-- * Blu -->
+                                    <div class="Btn-Blue">
+                                        <input type="radio" name="Btn-ChooseColor" onclick="ChangeHudInColorBlue()" checked>
+                                    </div>
+                                    <div class="Name-ChooseColor">BLUE</div>
+
+                                    <!-- * Verde -->
+                                    <div class="Btn-Green">
+                                        <input type="radio" name="Btn-ChooseColor" onclick="ChangeHudInColorGreen()">
+                                    </div>
+                                    <div class="Name-ChooseColor">GREEN</div>
+
+                                </form>
+
+                            </div>
+
+                            <!-- * Descrizione Selezione Un Colore -->
+                            <ul class="ListDescription-ChooseColor">
+                                <ul class="Description-ChooseColor">COLOR WILL BE APPLIED TO:
+                                    <li>BAKIS</li>
+                                    <li>CURSOR</li>
+                                    <li>HUD</li>
+                                </ul>
+                            </ul> 
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="Container-Counter">
+
+                <div id="Counter"></div>
+
+            </div>
+
+            <div class="Container-Hud-Game">
+
+                <div class="Container-SpawnBakis"></div>
+
+                <div class="Container-Bakis">
+
+                    <button id="Baki-1" onclick="AddPoints()"></button>
+                    <button id="Baki-2" onclick="AddPoints()"></button>
+                    <button id="Baki-3" onclick="AddPoints()"></button>
+                    <button id="Baki-4" onclick="AddPoints()"></button>
+                    <button id="Baki-5" onclick="AddPoints()"></button>
+
+                </div>
+                
+
+                <div id="Timer">REMAINING TIME: <span id="TimeGame">60</span></div>
+
+                <div id="Points">0</div>
+
+                <div class="Container-FinishGame">
+
+                    <div id="Finish"></div>
+
+                    <div class="FinalScore">FINAL SCORE:<span id="FinalPuntiScore"></span></div>
+
+                    <button type="button" class="Btn-Restart">RESTART</button>
+
+                </div>
+
+            </div>
+
+            
+
+            <!-- ! Ogni Volta Che La Pagina HTML Viene Caricata Viene Riprodotta La SoundTrack (SoundTrackHome.mp3) -->
+            <audio src="Sound/SoundTrackHome.mp3" id="SoundTrackHome" loop="loop" </audio>
+
+            <!-- ! Ogni Volta Che Il Gioco Viene Riprodotto Senza Spuntare La Fucus Mode Viene Riprodotta La SoundTrack Game Normale (SoundTrackGame.mp3) -->
+            <audio src="Sound/SoundTrackGame.mp3" id="SoundTrackGame" loop="loop" </audio>
+
+            <!-- ! Ogni Volta Che Il Gioco Viene Riprodotto Spuntando La Fucus Mode Viene Riprodotta La SoundTrack Game FocusMode (SoundTrackGameFocusMode.mp3) -->
+            <audio src="Sound/SoundTrackGameFocusMode.mp3" id="SoundTrackGameFocusMode" loop="loop" </audio>
+
+            <!-- ! Ogni Volta Che Un Button Viene Cliccato Viene Riprodotto Il Suound (clickbutton.mp3) (Tramite ID É Collegato Ad Una Function) -->
+            <audio src="Sound/ButtonClick.mp3" id="ButtonClick"></audio>
+
+            <!-- * JS -->
+            <script src="JS/Script.js"></script>
+
+        </body>
+
+    </html>
